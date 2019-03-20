@@ -42,6 +42,11 @@ namespace ItemGroupNumbering
                 oMenuItem = Application.SBO_Application.Menus.Item("ItemGroupNumbering");
                 oMenus = oMenuItem.SubMenus;
 
+
+                oCreationPackage.Type = SAPbouiCOM.BoMenuType.mt_STRING;
+                oCreationPackage.UniqueID = "ItemGroupNumbering.ItemGroupMatching";
+                oCreationPackage.String = "ითემების ჯგუფების და კოდების შესაბამისობა";
+                oMenus.AddEx(oCreationPackage);
                 // Create s sub menu
                 oCreationPackage.Type = SAPbouiCOM.BoMenuType.mt_STRING;
                 oCreationPackage.UniqueID = "ItemGroupNumbering.Form1";
@@ -60,6 +65,11 @@ namespace ItemGroupNumbering
 
             try
             {
+                if (pVal.BeforeAction && pVal.MenuUID == "ItemGroupNumbering.ItemGroupMatching")
+                {
+                    ItemGroupMatching activeForm = new ItemGroupMatching();
+                    activeForm.Show();
+                }
                 if (pVal.BeforeAction && pVal.MenuUID == "ItemGroupNumbering.Form1")
                 {
                     Form1 activeForm = new Form1();
