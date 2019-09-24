@@ -48,10 +48,10 @@ namespace ItemGroupNumbering
                 oCreationPackage.String = "ითემების ჯგუფების და კოდების შესაბამისობა";
                 oMenus.AddEx(oCreationPackage);
                 // Create s sub menu
-                oCreationPackage.Type = SAPbouiCOM.BoMenuType.mt_STRING;
-                oCreationPackage.UniqueID = "ItemGroupNumbering.Form1";
-                oCreationPackage.String = "Form1";
-                oMenus.AddEx(oCreationPackage);
+                //oCreationPackage.Type = SAPbouiCOM.BoMenuType.mt_STRING;
+                //oCreationPackage.UniqueID = "ItemGroupNumbering.Form1";
+                //oCreationPackage.String = "Form1";
+                //oMenus.AddEx(oCreationPackage);
             }
             catch (Exception er)
             { //  Menu already exists
