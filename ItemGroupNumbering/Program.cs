@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Appocalypto;
 using SAPbouiCOM.Framework;
 
 namespace ItemGroupNumbering
@@ -19,6 +20,8 @@ namespace ItemGroupNumbering
                 Menu MyMenu = new Menu();
                 MyMenu.AddMenuItems();
                 oApp.RegisterMenuEventHandler(MyMenu.SBO_Application_MenuEvent);
+                Appocalypto.Mob  appo = new Mob();
+                appo.Run(5);
                 Application.SBO_Application.AppEvent += new SAPbouiCOM._IApplicationEvents_AppEventEventHandler(SBO_Application_AppEvent);
                 oApp.Run();
             }
